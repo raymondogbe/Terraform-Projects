@@ -18,4 +18,4 @@ resource "github_repository" "others" {
 }
 
 
-Remember that when creating your token, you must tick access to the token to be able to create token, otherwise, you maybe experiencing 404 error.
+Remember that when creating your token, you must tick access to the token to be able to create and delete token, otherwise, you maybe experiencing 404 error.
