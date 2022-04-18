@@ -44,7 +44,7 @@ provider "aws" {
 resource "aws_instance" "my_ec2" {
   ami                    = "ami-0c02fb55956c7d316"
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.instance.id]  #This links the resource aws security group to the EC2
+  vpc_security_group_ids = [aws_security_group.instance.id]  #This links the resource aws security group to the EC2. Remember that securitty groups are already linked to EC2, therefore, it runs first before the EC2 is created.
 
   # A webserver is created inside <<-EOF EOF is used in writing multiple strings together.
   user_data = <<-EOF
